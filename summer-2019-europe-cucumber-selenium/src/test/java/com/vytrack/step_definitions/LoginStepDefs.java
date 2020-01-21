@@ -66,4 +66,19 @@ public class LoginStepDefs {
         Assert.assertEquals(string,actualTitle);
     }
 
+    @Given("the user logged in as a {string}")
+    public void the_user_logged_in_as_a(String user) {
+        String url=ConfigurationReader.get("url");
+        Driver.get().get(url);
+
+        LoginPage loginPage=new LoginPage();
+        String username=ConfigurationReader.get(user+"_username");
+        String password=ConfigurationReader.get(user+"_password");
+        loginPage.login(username,password);
+    }
+
+
+
+
+
 }
