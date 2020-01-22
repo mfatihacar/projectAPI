@@ -1,6 +1,5 @@
 Feature: Contacts Page
 
-
   Scenario: Default page number
     Given the user is on the login page
     And the user enters the sales manager credentials
@@ -12,14 +11,19 @@ Feature: Contacts Page
     Then the user should see the following menu options
       | Fleet | Customers | Activities | System |
 
-  @wip
-  Scenario: Login as a given user
+
+  Scenario Outline: Login as a given user
     Given the user is on the login page
     When the user logs  in using the following credentials
-      | username  | user1       |
-      | password  | UserUser123 |
-      | firstname | John        |
-      | lastname  | Doe         |
+      | username  | <username>  |
+      | password  | UserUser123   |
+      | firstname | <firstname> |
+      | lastname  | <lastname>  |
     Then the user should be able to login
 
+    Examples:
+      | username        | firstname | lastname |
+      | user1           | John      | Doe      |
+      | salesmanager101 | Peyton     | Harber    |
+      | storemanager85  | Rahwa     | Maaza    |
 
