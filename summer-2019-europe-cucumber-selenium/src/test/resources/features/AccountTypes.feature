@@ -10,7 +10,7 @@ Feature: Account types
   Scenario: Sales manager user
     Given the user logged in as a "salesmanager"
     When the user navigates to the "Customers" "Accounts" page
-    Then the title should contain "Accounts - Customer"
+    Then the title should contain "Accounts - Customers"
   @wip
   Scenario: Store manager
     Given the user logged in as a "storemanager"
