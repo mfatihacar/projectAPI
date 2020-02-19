@@ -8,26 +8,27 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
     public LoginPage(){
-        PageFactory.initElements(Driver.get(),this);
+        PageFactory.initElements(Driver.get(), this);
     }
 
     @FindBy(id="prependedInput")
-    public WebElement usernameInput;
+    public WebElement userName;
+
+
 
     @FindBy(id="prependedInput2")
-    public WebElement passwordInput;
+    public WebElement password;
 
-    @FindBy(id="_submit")
-    public WebElement loginBtn;
+    @FindBy(name = "_submit")
+    public WebElement submit;
 
-    public void login(String usernameStr,String passwordStr){
-        usernameInput.sendKeys(usernameStr);
-        passwordInput.sendKeys(passwordStr);
-        loginBtn.click();
+
+    public void login(String userNameStr, String passwordStr) {
+        userName.sendKeys(userNameStr);
+        password.sendKeys(passwordStr);
+        submit.click();
+        // verification that we logged
     }
-
-    @FindBy(className = "oro-subtitle")
-    public WebElement pageSubtitle;
-
+    //BREAK UNTIL 12:10
 
 }

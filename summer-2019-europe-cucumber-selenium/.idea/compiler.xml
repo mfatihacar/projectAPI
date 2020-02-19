@@ -9,5 +9,8 @@
         <module name="summer-2019-europe-cucumber-selenium" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="summer-2019-europe-cucumber-selenium" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

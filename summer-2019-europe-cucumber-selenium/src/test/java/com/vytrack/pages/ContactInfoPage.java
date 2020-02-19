@@ -5,12 +5,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class ContactInfoPage extends BasePage {
 
-    @FindBy(xpath = "//*[@class='user-name']")
-    public WebElement fullName;
+    @FindBy(className = "user-name")
+    public WebElement contactFullName;
 
-    @FindBy (xpath = "//*[@class='email']")
-    public WebElement emailAddressInfo;
+    @FindBy(css="a.phone")
+    public WebElement phone;
 
-    @FindBy (xpath = "//*[@class='phone']")
-    public WebElement phoneNumber;
+    @FindBy(css="a.email")
+    public WebElement email;
+
 }

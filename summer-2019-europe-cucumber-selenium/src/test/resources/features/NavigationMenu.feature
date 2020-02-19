@@ -1,18 +1,21 @@
 @navigate
-Feature: Users should be able to navigate through the menus
-  Scenario: navigate to Fleet --> Vehicles
-    Given the user enters the sales manager credentials
-    When the user navigates to the Fleet-Vehicles page
-    Then the user should see the expected Fleet URL
+Feature: Navigation Menu
 
-    @db
-   Scenario: navigate to Marketing --> Campaigns
-     Given the user enters the sales manager credentials
-     When the user navigates to the Marketing-Campaigns page
-     Then the user should see the expected Campaigns URL
+  Scenario: Fleet --> Vehicles
+    Given the user is on the login page
+    And the user enter the sales manager information
+    When the user navigates to Fleet, Vehicles
+    Then the url should be expected Fleet url
 
+  Scenario: Sales managers - Marketing—> Campaigns navigation
+    Given the user is on the login page
+    And the user enter the sales manager information
+    When  the user navigates Marketing Campaigns
+    Then the url should be expected Campaigns url
 
-   Scenario: navigate to Activities --> Calendar Events
-     Given the user enters the sales manager credentials
-     When the user navigates to the Activities-Calendar Events page
-     Then the user should see the expected Calendar Events URL
+  Scenario: Activities—> Calendar Events
+    Given the user is on the login page
+    And the user enter the sales manager information
+    When the user navigates Activities - Calendar events
+    Then the url should be expected Activities url
+
